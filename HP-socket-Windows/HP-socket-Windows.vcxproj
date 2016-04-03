@@ -68,7 +68,7 @@
     </Link>
     <PostBuildEvent>
       <Command>copy $(SolutionDir)\Dll\log4cplusD.dll $(TargetDir)\log4cplusD.dll
-xcopy  /i/s $(SolutionDir)\conf $(TargetDir)\conf</Command>
+xcopy  /i/s/y $(SolutionDir)\conf $(TargetDir)\conf</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -93,6 +93,10 @@ xcopy  /i/s $(SolutionDir)\conf $(TargetDir)\conf</Command>
       <AdditionalDependencies>ws2_32.lib;wsock32.lib;libevent_core.lib;libevent_extras.lib;libevent.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)\Dll\log4cplus.dll $(TargetDir)\log4cplus.dll
+xcopy  /i/s/y $(SolutionDir)\conf $(TargetDir)\conf</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CLog4cplus.h" />
