@@ -107,8 +107,8 @@ void CMasterThread::AccepCb(struct evconnlistener *listener, evutil_socket_t fd,
 	CMasterThread* pThis = static_cast<CMasterThread*>(user_data);
 
 	evutil_socket_t sfd;
-	struct sockaddr_in sin;
-	int slen = sizeof(sin);
+//	struct sockaddr_in sin;
+//	int slen = sizeof(sin);
 
 	sfd = fd;
 	if (-1 == sfd)
