@@ -67,7 +67,8 @@
       <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
-      <Command>copy $(SolutionDir)\Dll\log4cplusD.dll $(TargetDir)\log4cplusD.dll</Command>
+      <Command>copy $(SolutionDir)\Dll\log4cplusD.dll $(TargetDir)\log4cplusD.dll
+xcopy  /i/s $(SolutionDir)\conf $(TargetDir)\conf</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
